@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/style.css">
+  <title>Home</title>
+</head>
+<body>
+    <header style="position: fixed;">
+        <nav>
+        <ul class="navbar" style="position: relative;">
+            <li id="logo"><a  href="#home">LOGO</a></li>
+            <li ><a href="#news">HTML</a></li>
+            <li><a href="#contact">CSS</a></li>
+            <li id="bar"><a href="javascript:void(0);" onclick="showNavBar()">&#9776;</a></li>
+          </ul>
+          <ul id="navLinks">
+            <li> <a  href="javascript:void(0);" class="openbtn" onclick="openSideNav('sidebar-html')">HTML</a></li>
+            <li><a  href="javascript:void(0);" onclick="openSideNav('sidebar-css')">CSS</a></li>
+          </ul>
+          </nav>
+    </header>
+    <section>
+        <ul class="sidenav-lg">
+            <li><a href="#home">Home</a></li>
+            <li><a href="javascript:void(0);" onclick="content('textshadow.html')">Text Shadow</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+          <div id="sidebar-html" class="sidenav-sm">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav('sidebar-html')">×</a>
+            <a href="javascript:void(0);">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+          <div id="sidebar-css" class="sidenav-sm">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeSideNav('sidebar-css')">×</a>
+            <a href="javascript:void(0);" onclick="content('textshadow.html')">Tetx Shadow</a>
+            <a href="#">Servies</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+    </section>
+    <section id="main">
+        
+    </section>
+</body>
+<script src="../js/script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+    function content(x){
+        $(main).load(x);
+    }</script>
+</html>
